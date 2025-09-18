@@ -1,6 +1,16 @@
 # ruleta-psicologia-sistematica.io
 ruleta sistematica
 import React, { useEffect, useRef, useState } from "react";
+className="border rounded px-2 py-1"
+value={playerName}
+onChange={(e) => setPlayerName(e.target.value)}
+placeholder="Tu nombre"
+/>
+<button onClick={spinWheel} className="px-4 py-2 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700" disabled={spinning || questions.length===0}>
+{spinning ? "Girando..." : "Girar ruleta"}
+</button>
+<button onClick={resetGame} className="px-4 py-2 bg-gray-200 rounded">Reset</button>
+</div>
 
 
 <div className="mt-3 text-sm text-gray-700">Puntos actuales: <span className="font-semibold">{score}</span></div>
@@ -75,4 +85,4 @@ import React, { useEffect, useRef, useState } from "react";
 <footer className="text-xs text-gray-500 mt-6">Plantilla creada para uso educativo — puedes editar las preguntas desde el código.</footer>
 </div>
 );
-}
+}                
